@@ -1,0 +1,20 @@
+/*
+    Requirements:
+        sword
+        shield
+*/
+
+// Healing loop
+? hp < 7
+  activate potion
+
+// Default Weapon
+equipL ouroboros
+equipR star
+  
+// Weapon swaps
+? foe = boss
+  equipL sword
+  equipR shield
+? harvest.distance < 10
+  equip shovel

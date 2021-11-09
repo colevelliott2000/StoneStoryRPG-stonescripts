@@ -1,0 +1,24 @@
+/*
+    Requirements:
+        sword  
+        shield
+        crossbow
+*/
+
+// Healing loop
+? hp < 7
+  activate potion
+
+// Default equipment
+equipL sword
+equipR shield
+
+// Weapon swaps
+? foe = mosquito
+  equip crossbow
+? harvest.distance < 10
+  equip hatchet
+? foe ! boss & foe.distance > 17
+  equipL ouroboros
+? pickup.distance < 10
+  equipL star
