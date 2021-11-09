@@ -1,8 +1,7 @@
 /*
-    Requirements:
-        sword  
-        shield
-        crossbow
+  Requirements:
+    Poison Wand
+    Crossbow
 */
 
 // Healing loop
@@ -10,17 +9,15 @@
   activate potion
 
 // Default equipment
-equipL sword
-equipR shield
+equipL crossbow
+equipR poison wand
 
 // Weapon swaps
-? foe = mosquito
-  equip crossbow
+? foe = scarab
+  equip blade
 ? harvest.distance < 10
   equip hatchet
 ? foe ! boss & foe.distance > 17
   equipL ouroboros
 ? pickup.distance < 10
   equipL star
-? foe = boss & foe.distance < 10
-  equip blade
