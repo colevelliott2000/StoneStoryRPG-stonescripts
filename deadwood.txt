@@ -22,3 +22,5 @@ equipR shield
   equipL ouroboros
 ? pickup.distance < 10
   equipL star
+? foe = boss & foe.distance < 10
+  equip blade
