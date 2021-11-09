@@ -2,26 +2,17 @@
     Requirements:
         Fire Wand
         Poison Wand
-        Bardiche
 */
 
 ?foe.distance <= 20
  ?foe!boss
-  ?item.GetCooldown(＂blade＂) <= 0 
-  ^ & foe.count >= 8 
-  ^ & foe.distance > 6
-    equip blade
-    activate R
-  :
-    equipL fire wand
-    equipR poison wand
+   equipL fire wand
+   equipR poison wand
  :
-   equip Bardiche
-  ?foe.distance <= 10 & item.GetCooldown(＂bard＂) <=0
-   activate R
+   equip Blade
+   ?foe.distance <= 10 & 
+   ^ item.GetCooldown(＂blade＂) <= 0
+     activate R
 :
   equipL ouroboros
   equipR star
-
-?hp < 13
-  activate potion
