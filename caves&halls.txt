@@ -4,6 +4,10 @@
         Poison Wand
 */
 
+// Healing loop
+? hp < 7
+  activate potion
+
 ?foe.distance <= 20
  ?foe!boss
    equipL fire wand

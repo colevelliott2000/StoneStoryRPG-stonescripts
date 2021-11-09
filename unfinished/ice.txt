@@ -1,0 +1,12 @@
+// Healing loop
+? hp < 7
+  activate potion
+
+// Default equipment
+equip blade
+// Weapon swaps
+? foe = boss
+  ? foe.distance ! 2
+    equip shovel
+  :
+    equip blade
